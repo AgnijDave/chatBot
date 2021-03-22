@@ -1,0 +1,29 @@
+{
+"intents": [
+    {"tag":"greeting",
+        "patterns":["ola","hello","hi","hey","h","whats up","anyone there","good day"],
+        "responses":["Hello, How can I be of service","Welcome How may I assist you?"],
+        "context_set":""
+    },
+
+    {"tag":"goodBye",
+        "patterns":["im leaving","bye","ciao","sayonara"],
+        "responses":["Thank you for using our service, hope to see you again.","visit soon","see you later"],
+        "context_set":""},
+
+    {"tag":"buy",
+        "patterns":["product pricing","offers","buy a license"],
+        "responses":["To view all our offers please navigate to the product pricing page, Thanks!"],
+        "context_set":""},
+
+    {"tag":"timePass",
+        "patterns":["lets go out","dinner","lunch","sweet","and in the evening news we have mark albrighton player of leicester city fc demanding more passion from his fellow teammates in the champions league"],
+        "responses":["please enter an appropriate response","please ask another question"],
+        "context_set":""},
+
+    {"tag":"customerCare",
+        "patterns":["can i get in touch with an executive","can we do this on call","talk to a service provider"],
+        "responses":["In order to get in touch with a customer execcutive please dial xxxxxxxxx"],
+        "context_set":""}
+]
+}
