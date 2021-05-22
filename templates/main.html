@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Keras chatBot Deployment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <h2>chatBot Implementation</h2>
+
+  <form action="{{ url_for('getresponse') }}" method="POST">
+    <div class="form-group">
+      <label for="usr">Query:</label>
+      <input name="string" type="text" class="form-control" id="usr" required>
+      <br>
+      <input type="Submit">
+    </div>
+  </form>
+</div>
+<br>
+
+<div class="result" align="center">
+    {% if result %}
+        <br> query - {{ original_input }}
+        <br> output format - category |probabilityScore|: response
+           <p style="font-size:24px">{{ result }}</p>
+
+    {% endif %}
+</div>
+</body>
+
+</html>
+
